@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MaBibliothèque</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>MaBibilio.</p>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="accueil.html" class="link active">Accueil</a></li>
+                    <li><a href="propos.html" class="link">A propos</a></li>
+                    <li><a href="#" class="link">Services</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn" id="loginBtn">Se connecter</button>
+                <button class="btn" id="registerBtn">S'inscrire</button>
+            </div>
+            <div>
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+        <!--Formulaire-->
+    <div class="form-container">
+        <h2 style="color: white;">Inscription</h2>
+        <form action="register.php" method="POST">
+          
+                <input type="text" name="name" placeholder="Nom" required>
+                <input type="text" name="surname" placeholder="Prénom" required>
+                <input type="email" name="mail" placeholder="E-mail" required>
+                <input type="text" name="username" placeholder="Nom d'utilisateur" required>
+                <input type="password" name="password" placeholder="Entrez un mot de passe" required>
+                <button type="submit">S'inscrire</button>
+            
+            
+
+            <!-- Bouton de soumission -->
+        </form>
+    </div>
+    </div>
+    <footer>
+        <p class="par">&copy; 2025 Ma Biblio Web. Tous droits reservés.</p>
+        <p class="par">Adresse : 123 Rude du Gourmet, Limoges | Tél : 01 23 45 67 89</p>
+     </footer>
+</body>
+<script>
+    // Sélectionne le bouton grâce à son ID
+    const button = document.getElementById('loginBtn');
+    const button2 = document.getElementById('registerBtn');
+    // Ajoute un écouteur d'événements pour détecter le clic sur le bouton
+    button.addEventListener('click', function() {
+        // Change l'URL de la page actuelle
+        window.location.href = 'index.html';
+    });
+    button2.addEventListener('click', function() {
+        // Change l'URL de la page actuelle
+        window.location.href = 'register.html';
+    });
+</script>
+</html>
