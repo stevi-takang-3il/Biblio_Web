@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaBibliothèque</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <style>
+        .menu-title {
+            padding: 2rem 0;
+            text-align: center;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .menu-container {
+            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
+        .menu-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+
+        .menu-card:hover {
+            transform: scale(1.05);
+        }
+
+        .menu-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .menu-card .p-3 {
+            padding: 1rem;
+        }
+
+        footer {
+            background: rgba(255, 255, 255, 0.1);
+            color: #333;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 2rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        footer .par2 {
+            margin: 0.5rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>MaBibliothèque.</p>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="index.html" class="link active">Accueil</a></li>
+                    <li><a href="propos.html" class="link">À propos</a></li>
+                    <li><a href="#" class="link">Services</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn" id="loginBtn">Se connecter</button>
+                <button class="btn" id="registerBtn">S'inscrire</button>
+            </div>
+            <div>
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+        
+        <section>
+            <h2 class="menu-title">LIVRES</h2>
+            <div class="menu-container">
+                <!-- Exemple d'une carte livre -->
+                <div class="menu-card">
+                    <img src="image.webp" alt="Image du livre Culture">
+                    <div class="p-3">
+                        <h5>CULTURE</h5>
+                        <p>Connaissances</p>
+                        <button class="btn">Choisir</button>
+                    </div>
+                </div>
+                <!-- Répétez les cartes comme nécessaire -->
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p class="par2">&copy; 2025 MaBibliothèque. Tous droits réservés.</p>
+        <p class="par2">Adresse : 123 Rue du Gourmet, Limoges | Tél : 01 23 45 67 89</p>
+    </footer>
+
+    <script>
+        // Bouton de connexion
+        const button = document.getElementById('loginBtn');
+        const button2 = document.getElementById('registerBtn');
+
+        // Redirige vers la page de connexion
+        button.addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+
+        // Redirige vers la page d'inscription
+        button2.addEventListener('click', function () {
+            window.location.href = 'register.html';
+        });
+    </script>
+</body>
+</html>
